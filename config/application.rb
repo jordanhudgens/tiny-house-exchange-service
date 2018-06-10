@@ -15,6 +15,7 @@ Bundler.require(*Rails.groups)
 module TinyHouseXchangeApi
   class Application < Rails::Application
     config.load_defaults 5.2
+    config.middleware.use ActionDispatch::Cookies
     config.api_only = true
   end
 end
