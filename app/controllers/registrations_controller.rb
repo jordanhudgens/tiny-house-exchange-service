@@ -11,7 +11,6 @@ class RegistrationsController < ApplicationController
 
     if user
       session[:user_id] = user.id
-      cookies["tiny_house_exchange_user_id"] = { value: user.id, httponly: true }
       render json: { status: :created }
     else
       render json: { status: 500 }
