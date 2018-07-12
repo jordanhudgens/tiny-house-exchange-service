@@ -42,7 +42,8 @@ class HomesController < ApplicationController
       params.require(:home).permit(
         :name,
         :description,
-        :user_id
+        :user_id,
+        :featured_image
       )
     end
 end
