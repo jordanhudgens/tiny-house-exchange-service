@@ -6,6 +6,8 @@ class Home < ApplicationRecord
   def featured_image_url
     if self.featured_image.attachment
       self.featured_image.attachment.service_url
+    else
+      ""
     end
   end
 end
